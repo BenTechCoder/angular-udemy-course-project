@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Recipe } from './recipe.model';
 
 @Component({
   selector: 'app-recipe-book',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class RecipeBookComponent {
 
+  /*
+  1. Get recipe-item component to emit event when clicked
+  2. Get that event data over to the recipe component
+  3. pass that event to the recipe detail component
+  */
+
+  recipeEl: Recipe;
+  show: boolean;
 }

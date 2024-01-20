@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { RecipeBookModule } from './recipe-book/recipe-book.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { RecipeBookModule } from './recipe-book/recipe-book.module';
   imports: [
     BrowserModule,
     ShoppingListModule,
-    RecipeBookModule
+    RecipeBookModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
