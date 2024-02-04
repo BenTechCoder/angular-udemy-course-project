@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { RecipeBookModule } from './recipe-book/recipe-book.module';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,10 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     ShoppingListModule,
     RecipeBookModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

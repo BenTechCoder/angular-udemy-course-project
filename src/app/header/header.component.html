@@ -8,10 +8,10 @@
           <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
             <ul class="nav navbar-nav">
                 <li><a (click)="onEmitNav('recipe')"  href="javascript:;">Recipes</a></li>
-                <li><a (click)="onEmitNav('shoppingList')"  href="javascript:;">Shopping List</a></li>
+                <li><a (click)="onEmitNav('shoppingList')" >Shopping List</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
+                <li class="dropdown" appDropdownDirective>
                     <a href="#" role="button" class="dropdown-toggle">Toggle <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Save Data</a></li>
