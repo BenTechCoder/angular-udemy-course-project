@@ -5,6 +5,9 @@ import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './recipe-list/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { SharedModule } from '../shared/shared.module';
+import { RoutingModule } from '../routing.module';
+import { DetailLoadComponent } from './recipe-detail/detail-load/detail-load.component';
+import { RecipeEditComponent } from './recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -12,8 +15,10 @@ import { SharedModule } from '../shared/shared.module';
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
+    DetailLoadComponent,
+    RecipeEditComponent,
   ],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, SharedModule, RoutingModule],
   exports: [
     RecipeBookComponent,
     RecipeListComponent,

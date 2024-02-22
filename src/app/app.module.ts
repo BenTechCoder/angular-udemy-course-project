@@ -7,6 +7,7 @@ import { RecipeBookModule } from './recipe-book/recipe-book.module';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RoutingModule } from './routing.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
   ],
   imports: [
     BrowserModule,
+    RoutingModule,
     ShoppingListModule,
     RecipeBookModule,
     FormsModule,
