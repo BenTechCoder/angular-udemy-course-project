@@ -7,8 +7,4 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-udemy-course-project';
-  loadedFeature: string = 'recipe';
-  loadNav(link: string) {
-    this.loadedFeature = link;
-  }
 }
