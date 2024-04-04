@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ShoppingListComponent } from './shopping-list.component';
 import { ShoppingListComponentComponent } from './shopping-list-component/shopping-list-component.component';
 import { ShoppingListEditComponent } from './shopping-list-edit/shopping-list-edit.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { ShoppingListEditComponent } from './shopping-list-edit/shopping-list-ed
     ShoppingListEditComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     ShoppingListComponent,
