@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule, provideHttpClient, withInterceptors } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
@@ -11,6 +11,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RoutingModule } from './routing.module';
 import { RecipeService } from './recipe-book/recipe.service';
 import { AuthComponent } from './auth/auth.component';
+import { authInterceptorInterceptor } from './auth/auth-interceptor.interceptor';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, AuthComponent],
@@ -21,11 +22,10 @@ import { AuthComponent } from './auth/auth.component';
     RecipeBookModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
     SharedModule,
   ],
   exports: [],
-  providers: [ShoppingListService, RecipeService],
+  providers: [ShoppingListService, RecipeService, provideHttpClient(withInterceptors([authInterceptorInterceptor]))],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

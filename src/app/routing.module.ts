@@ -8,12 +8,14 @@ import { DetailLoadComponent } from './recipe-book/recipe-detail/detail-load/det
 import { RecipeEditComponent } from './recipe-book/recipe-edit/recipe-edit.component';
 import { RecipesResolver} from './recipe-book/recipe-resolver.resolver';
 import { AuthComponent } from './auth/auth.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'recipe-book', pathMatch: 'full' },
   {
     path: 'recipe-book',
     component: RecipeBookComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: '', component: DetailLoadComponent },
       { path: 'new', component: RecipeEditComponent },
